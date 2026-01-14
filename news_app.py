@@ -11,7 +11,7 @@ st.caption("メディア × キーワード")
 # =====================
 rss_list = {
     "NHK": "https://www.nhk.or.jp/rss/news/cat0.xml",
-    "Newsweek Japan":https://www.newsweekjapan.jp/rss/stories.xml,
+    "Newsweek Japan":"https://www.newsweekjapan.jp/rss/stories.xml",
     "日経": "https://www.nikkei.com/rss/news/major.xml",
     "ITmedia": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
     "共同通信": "https://www.kyodo.co.jp/rss.xml",
@@ -107,6 +107,7 @@ with tab2:
 
     if not found:
         st.info("現在、金・プラチナ関連記事は見つかりませんでした。")
+
 
 
 
