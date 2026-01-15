@@ -11,11 +11,8 @@ st.caption("メディア × キーワード")
 # =====================
 rss_list = {
     "NHK": "https://www.nhk.or.jp/rss/news/cat0.xml",
-   
     "ITmedia": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
-  
     "GIGAZINE": "https://gigazine.net/news/rss_2.0/",
-   
 }
 
 # =====================
@@ -30,8 +27,6 @@ keywords = [
     "医療","健康","年金","教育","少子化",
     "地震","台風","豪雨","災害","防災"
 ]
-
-
 
 # =====================
 # サイドバー
@@ -73,17 +68,17 @@ with tab1:
                 st.write("---")
 
 # =====================
-# サイト
+# 🌐 サイト
 # =====================
-
 with tab2:
-   
+    st.subheader("🔗 便利サイト")
+
     st.link_button(
         "📊 田中貴金属｜金・プラチナ相場を見る",
         "https://gold.tanaka.co.jp/commodity/souba/"
     )
 
-st.link_button(
+    st.link_button(
         "🚃 阪急電車｜運行情報",
         "https://www.hankyu.co.jp/traffic/"
     )
@@ -92,7 +87,6 @@ st.link_button(
         "📰 日本経済新聞｜WEBトップ",
         "https://www.nikkei.com/"
     )
-
 
 
 
