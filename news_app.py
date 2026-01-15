@@ -11,14 +11,11 @@ st.caption("メディア × キーワード")
 # =====================
 rss_list = {
     "NHK": "https://www.nhk.or.jp/rss/news/cat0.xml",
-    "Newsweek Japan":"https://www.newsweekjapan.jp/rss/stories.xml",
-    "日経": "https://www.nikkei.com/rss/news/major.xml",
+   
     "ITmedia": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
-    "共同通信": "https://www.kyodo.co.jp/rss.xml",
+  
     "GIGAZINE": "https://gigazine.net/news/rss_2.0/",
    
-    "東洋経済": "https://toyokeizai.net/list/feed/rss",
-    "ダイヤモンド": "https://diamond.jp/list/feed/rss"
 }
 
 # =====================
@@ -34,13 +31,7 @@ keywords = [
     "地震","台風","豪雨","災害","防災"
 ]
 
-# =====================
-# 金・プラチナ関連記事用キーワード
-# =====================
-metal_keywords = [
-    "プラチナ", "ゴールド",
-    "金価格", "プラチナ価格", 
-]
+
 
 # =====================
 # サイドバー
@@ -64,10 +55,10 @@ st.divider()
 # =====================
 # タブ作成
 # =====================
-tab1, tab2 = st.tabs(["📰", "💰"])
+tab1, tab2 = st.tabs(["ニュース", "サイト"])
 
 # =====================
-# 📰 全ニュース
+# 📰 ニュース
 # =====================
 with tab1:
     for media, url in rss_list.items():
@@ -82,31 +73,26 @@ with tab1:
                 st.write("---")
 
 # =====================
-# 💰 金・プラチナ関連記事
+# サイト
 # =====================
 
 with tab2:
-    st.subheader("💰 金・プラチナ価格（公式）")
+   
     st.link_button(
         "📊 田中貴金属｜金・プラチナ相場を見る",
         "https://gold.tanaka.co.jp/commodity/souba/"
     )
 
+st.link_button(
+        "🚃 阪急電車｜運行情報",
+        "https://www.hankyu.co.jp/traffic/"
+    )
 
-with tab2:
-    found = False
+    st.link_button(
+        "📰 日本経済新聞｜WEBトップ",
+        "https://www.nikkei.com/"
+    )
 
-    for media, url in rss_list.items():
-        feed = feedparser.parse(url)
-        for entry in feed.entries:
-            if any(word in entry.title for word in metal_keywords):
-                found = True
-                st.subheader(f"【{media}】{entry.title}")
-                st.link_button("記事を読む", entry.link)
-                st.write("---")
-
-    if not found:
-        st.info("現在、金・プラチナ関連記事は見つかりませんでした。")
 
 
 
