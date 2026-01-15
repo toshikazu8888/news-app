@@ -80,13 +80,14 @@ with tab2:
 
     st.link_button(
         "🚃 阪急電車｜運行情報",
-        "https://www.hankyu.co.jp/traffic/"
+        "https://www.hankyu.co.jp/railinfo/"
     )
 
     st.link_button(
         "📰 日本経済新聞｜WEBトップ",
         "https://www.nikkei.com/"
     )
+
 
 
 
